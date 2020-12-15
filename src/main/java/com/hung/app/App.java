@@ -26,15 +26,13 @@ public class App
     {
         String pathFile = new Scanner(args[0]).nextLine();
         pathFile = pathFile.trim();
-        File folder = new File(pathFile);
-        for(File file : folder.listFiles()) {
-            try {
-    			removeHFFromFile(file);
-    		} catch (Exception e) {
-    			// TODO Auto-generated catch block
-    			e.printStackTrace();
-    		}
-        }
+        File file = new File(pathFile);
+        try {
+			removeHFFromFile(file);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         System.out.println("Đã hoàn thành!");
     }
     
