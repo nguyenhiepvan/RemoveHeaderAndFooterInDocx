@@ -24,8 +24,7 @@ public class App
 
 	public static void main( String[] args )
     {
-        System.out.println("Nhập đường dẫn folder: ");
-        String pathFile = new Scanner(System.in).nextLine();
+        String pathFile = new Scanner(args[0]).nextLine();
         pathFile = pathFile.trim();
         File folder = new File(pathFile);
         for(File file : folder.listFiles()) {
